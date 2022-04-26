@@ -1,71 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css"
+    />
+    <link />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+   
+    
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
-    <div class="container" style="position: absolute; left: 90px; top: 70px;">
-        <div class="row">
-          <div class="col">
-            <select class="form-select" aria-label="Default select example">
-                <option disabled selected>Selecione o Curso</option>
-                <option value="1">CURSO A</option>
-                <option value="2">CURSO B</option>
-                <option value="3">CURSO C</option>
-              </select>
-          </div>
-          <div class="col">
-            <select class="form-select" aria-label="Default select example">
-                <option disabled selected>Selecione a Turma</option>
-                <option value="1">TURMA A</option>
-                <option value="2">TURMA B</option>
-                <option value="3">TURMA C</option>
-              </select>
-          </div>
-          <div class="col">
-            <select class="form-select" aria-label="Default select example">
-                <option disabled selected>Selecione a Disciplina</option>
-                <option value="1">DISCIPLINA A</option>
-                <option value="2">DISCIPLINA B</option>
-                <option value="3">DISCIPLINA C</option>
-              </select>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" id="curso">
+          <h6>Selecione o curso:</h6>
+          <select class="form-select">
+            <option disabled selected>-------------</option>
+            <option value="1">Administração</option>
+            <option value="2">Informática</option>
+            <option value="3">Enfermagem</option>
+            <option value=" 4">Segurança do Trabalho</option>
+          </select>
+        </div>
 
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">NUMERO DE AULAS</label>
-                 <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                </select>
-              </div>
-              <p>Data: <input type="text" id="calendario" /></p>
-          </div>
+        <!--irá mudar conforme a seleção anterior-->
+        <div class="col-md-6" id="turma">
+          <h6>Selecione a turma:</h6>
+          <select class="form-select">
+            <option disabled selected>-------------</option>
+            <option value="1">TI 1 - Noite</option>
+            <option value="2">TI 2 - Tarde</option>
+            <option value="3">TI 3 - Manhã</option>
+          </select>
         </div>
       </div>
 
-      <script>
-         $( "#calendario" ).datepicker({
+      <!--irá mudar conforme a seleção anterior-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="disciplina">
+            <h6>Selecione a Disciplina:</h6>
+            <select class="form-select">
+              <option disabled selected>-------------</option>
+              <option value="1">Desenvolvimento web I</option>
+              <option value="2">Lógica de programação</option>
+              <option value="3">Língua estrangeira I</option>
+            </select>
+          </div>
+        </div>
+
+        <!--Informado manualmente pelo usuário-->
+        <div class="col-md-6">
+          <h6>Quantidade de dias da Disciplina:</h6>
+          <input
+            id="cargahoraria"
+            type="number"
+            min="1"
+            class="form-control"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+      </div>
+
+      <!--irá mudar conforme a seleção da disciplina-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="professor">
+            <h6>Nome do Professor:</h6>
+            <select class="form-select">
+              <option disabled selected>-------------</option>
+              <option value="1">Beatrice</option>
+              <option value="2">Daniel</option>
+              <option value="3">Elias</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="calenario">
+            <h6>Selecione a data:</h6>
+            <input class="form-control" type="date" id="calendario" />
+          </div>
+        </div>
+      </div>
+      <div class="botao-Salvar">
+        <button type="button" class="btn btn-outline-primary">Salvar Informações</button>
+      </div>
+     
+    </div>
+
+    <style>
+      .container {
+        position: absolute;
+        left: 90px;
+        top: 70px;
+      }
+      .row {
+        padding: 0px;
+        padding-bottom: 10px;
+      }
+      body {
+        background-color: rgba(119, 117, 117, 0.404);
+      }
+    </style>
+
+    <!--
+    <script>
+      
+      $("#calendario").datepicker({
         showOn: "button",
-        buttonImage: "calendario.png",
+        buttonImage: "http://www.w3.org/2000/svg",
         buttonImageOnly: true,
-        numberOfMonths: 6
-    });
+        numberOfMonths: 6,
+      });
 
-
-      </script>
-
-    
-</body>
+      if (calendario < cargahoraria) {
+        document.write("adicione outra data")
+      }
+   
+    </script>
+     -->
+  </body>
 </html>
