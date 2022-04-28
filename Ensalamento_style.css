@@ -1,0 +1,12 @@
+.container {
+    position: relative;
+    left: 90px;
+    top: 70px;
+  }
+  .row {
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+  body {
+    background-color: rgba(119, 117, 117, 0.404);
+  }
