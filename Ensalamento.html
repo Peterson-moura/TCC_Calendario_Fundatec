@@ -16,14 +16,16 @@
     />
     <link />
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-   
-    
+
     <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
     <title>Ensalamento</title>
   </head>
   <body>
     <div class="container">
+      <div class="cabecalho">
+        <h2>Ensalamento</h2>
+      </div>
       <div class="row">
         <div class="col-md-6" id="curso">
           <h6>Selecione o curso:</h6>
@@ -35,8 +37,9 @@
             <option value=" 4">Segurança do Trabalho</option>
           </select>
         </div>
-
-        <!--irá mudar conforme a seleção anterior-->
+      </div>
+      <!--irá mudar conforme a seleção anterior-->
+      <div class="row">
         <div class="col-md-6" id="turma">
           <h6>Selecione a turma:</h6>
           <select class="form-select">
@@ -61,8 +64,9 @@
             </select>
           </div>
         </div>
-
-        <!--Informado manualmente pelo usuário-->
+      </div>
+      <!--Informado manualmente pelo usuário-->
+      <div class="row">
         <div class="col-md-6">
           <h6>Quantidade de dias da Disciplina:</h6>
           <input
@@ -75,7 +79,6 @@
           />
         </div>
       </div>
-
       <!--irá mudar conforme a seleção da disciplina-->
       <div class="row">
         <div class="col-md-6">
@@ -89,6 +92,9 @@
             </select>
           </div>
         </div>
+      </div>
+
+      <div class="row">
         <div class="col-md-6">
           <div class="calenario">
             <h6>Selecione a data:</h6>
@@ -96,42 +102,54 @@
           </div>
         </div>
       </div>
+
+      <br />
       <div class="botao-Salvar">
-        <button type="button" class="btn btn-outline-primary">Salvar Informações</button>
+        <button type="button" class="btn btn-outline-primary">
+          Salvar Informações
+        </button>
       </div>
-     
     </div>
 
     <style>
-      .container {
+      .cabecalho {
         position: relative;
+        text-align: center;
+        margin: 70px;
+      }
+      .container {
         left: 90px;
         top: 70px;
       }
       .row {
         padding: 0px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+      }
+      #modlidade {
+        padding-top: 20px;
+        padding-bottom: 7px;
+      }
+      #salvar {
+        margin-top: 25px;
       }
       body {
         background-color: rgba(119, 117, 117, 0.404);
       }
+      .button {
+        margin-top: 20px;
+      }
     </style>
 
-    <!--
     <script>
-      
       $("#calendario").datepicker({
-        showOn: "button",
-        buttonImage: "http://www.w3.org/2000/svg",
-        buttonImageOnly: true,
-        numberOfMonths: 6,
+        numberOfMonths: 5,
+        showButtonPanel: true,
       });
 
       if (calendario < cargahoraria) {
-        document.write("adicione outra data")
+        document.write("adicione outra data");
       }
-   
     </script>
-     -->
   </body>
 </html>
