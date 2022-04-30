@@ -15,13 +15,13 @@
 
   <link rel="stylesheet" type="text/css" href="Ensalamento_style.css" />
 
-  <title>Ensalamento</title>
+  <title>Agendamento</title>
 </head>
 
 <body>
   <div class="container">
     <div class="cabecalho">
-      <h2>Ensalamento</h2>
+      <h2>Agendamento</h2>
     </div>
     <div class="row">
       <div class="col-md-6" id="curso">
@@ -53,16 +53,16 @@
       <div class="col-md-6">
         <div class="disciplina">
           <h6>Selecione a Disciplina:</h6>
-          <select class="form-select">
+          <select  class="form-select" id="disciplina">
             <option disabled selected>-------------</option>
-            <option value="1">Desenvolvimento web I</option>
-            <option value="2">Lógica de programação</option>
-            <option value="3">Língua estrangeira I</option>
+            <option id="desenvolvimento">Desenvolvimento web I</option>
+            <option id="logica">Lógica de programação</option>
+            <option id="lingua">Língua estrangeira I</option>
           </select>
         </div>
       </div>
     </div>
-    <!--Informado manualmente pelo usuário-->
+    <!-- Informado manualmente pelo usuário -->
     <div class="row">
       <div class="col-md-6">
         <h6>Quantidade de dias da Disciplina:</h6>
@@ -70,10 +70,11 @@
           aria-describedby="basic-addon1" />
       </div>
     </div>
+
     <!--irá mudar conforme a seleção da disciplina-->
     <div class="row">
       <div class="col-md-6">
-        <div class="professor">
+        <div class="professor" id="teacher">
           <h6>Nome do Professor:</h6>
           <select class="form-select">
             <option disabled selected>-------------</option>
@@ -96,51 +97,61 @@
 
     <br />
     <div class="botao-Salvar">
-      <button type="button" class="btn btn-outline-primary">
+      <button onclick="enviar()" type="button" class="btn btn-outline-primary">
         Salvar Informações
       </button>
     </div>
   </div>
-<style>
+  <style>
     .cabecalho {
-    position: relative;
-    text-align: center;
-    margin: 70px;
+      position: relative;
+      text-align: center;
+      margin: 70px;
     }
-    .container {
-    left: 90px;
-    top: 70px;
-    }
-    .row {
-    padding: 0px;
-    padding-bottom: 0px;
-    margin-top: 10px;
-    }
-    #modlidade {
-    padding-top: 20px;
-    padding-bottom: 7px;
-    }
-    #salvar {
-    margin-top: 25px;
-    }
-    body {
-    background-color: rgba(119, 117, 117, 0.404);
-    }
-    .button {
-    margin-top: 20px;
-    }
-    </style>
 
-    <script>
-      $("#calendario").datepicker({
+    .container {
+      left: 90px;
+      top: 70px;
+    }
+
+    .row {
+      padding: 0px;
+      padding-bottom: 0px;
+      margin-top: 10px;
+    }
+
+    #modlidade {
+      padding-top: 20px;
+      padding-bottom: 7px;
+    }
+
+    #salvar {
+      margin-top: 25px;
+    }
+
+    body {
+      background-color: rgba(119, 117, 117, 0.404);
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+  </style>
+
+  <script>
+    function enviar() {
+      var valor = document.getElementById("disciplina").value;
+      alert("Você digitou: " + valor);
+    }
+    /*  $("#calendario").datepicker({
         numberOfMonths: 5,
         showButtonPanel: true,
       });
 
       if (calendario < cargahoraria) {
         document.write("adicione outra data");
-      }
-    </script>
+      } */
+  </script>
 </body>
 
 </html>
