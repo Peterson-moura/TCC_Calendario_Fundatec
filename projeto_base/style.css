@@ -22,6 +22,12 @@
   border-radius: 10px;
   background-color: rgba(155, 155, 155, 0.356);
 }
+#turno {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
 #disciplina {
   width: 250px;
   text-align: justify;
