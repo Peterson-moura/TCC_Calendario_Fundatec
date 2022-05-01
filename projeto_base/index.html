@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./script.js" />
+    <!--  <link rel="stylesheet" href="./script.js" /> -->
     <title>Document</title>
   </head>
 
@@ -16,17 +16,14 @@
       </div>
 
       <div class="curso">
-              <p>Selecione a turma</p>
-              <select id="turma">
-                <option id="ta12">TA 12 Noite</option>
-                <option id="te16">TE 16 Noite</option>
-                <option id="te15">TE 15 Tarde</option>
-                <option id="te14">TE 14 Manhã</option>
-                <option id="tI18">TI 18 Tarde</option>
-                <option id="tst6">TST 6 Manhã</option>
-              </select>
-            </div>
-
+        <p>Selecione o curso</p>
+        <select id="curso">
+          <option id="adm">Técnico em Administração</option>
+          <option id="inf">Técnico em Informática</option>
+          <option id="enf">Técnico em Enfermagem</option>
+          <option id="seg">Técnico em Segurança do Trabalho</option>
+        </select>
+      </div>
 
       <div class="turma">
         <p>Selecione a turma</p>
@@ -50,6 +47,47 @@
           <option id="desenvolvimento">Desenvolvimento Web I</option>
         </select>
       </div>
+
+      <div class="professor">
+        <p>Selecione o Professor</p>
+        <select id="professor">
+          <option id="elias">Elias</option>
+          <option id="daniel">Daniel</option>
+          <option id="beatrice">Beatrice</option>
+          <option id="marcelo">Marcelo</option>
+          <option id="tati">Tatiane</option>
+        </select>
+      </div>
+
+      <div class="data">
+        <p>Selecione a data</p>
+        <input id="data" type="date" />
+      </div>
+
+      <div class="botao">
+        <button id="botao" onclick="enviar()">Salvar informações</button>
+      </div>
     </div>
+    <script>
+      function enviar() {
+        let curso = document.getElementById("curso").value;
+        let turma = document.getElementById("turma").value;
+        let disciplina = document.getElementById("disciplina").value;
+        let professor = document.getElementById("professor").value;
+        let data = document.getElementById("data").value;
+        alert(
+          "Curso: " +
+            curso +
+            "\nTurma: " +
+            turma +
+            "\nDisciplina: " +
+            disciplina +
+            "\nProfessor:" +
+            professor +
+            "\nData: " +
+            data
+        );
+      }
+    </script>
   </body>
 </html>
