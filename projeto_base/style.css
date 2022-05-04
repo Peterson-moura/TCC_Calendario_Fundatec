@@ -1,3 +1,56 @@
 .container {
- display: grid;
+  display: block;
+  margin: 20px;
+  padding: 20px;
+  width: 800px;
+  height: 100vh;
+  margin: auto;
+  background-color: rgba(207, 207, 207, 0.466);
+}
+#cabecalho {
+  text-align: center;
+}
+#curso {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#turma {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#turno {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#disciplina {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#professor {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#data {
+  width: 250px;
+  text-align: justify;
+  border-radius: 10px;
+  background-color: rgba(155, 155, 155, 0.356);
+}
+#botao {
+  width: 149;
+  text-align: justify;
+  border-radius: 4px;
+  background-color: rgba(134, 157, 201, 0.74);
+  margin: 20px 0 0;
+  padding: 6px;
 }
