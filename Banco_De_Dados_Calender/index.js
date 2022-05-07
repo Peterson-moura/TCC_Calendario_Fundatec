@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+ let url 
 
 // depois do db
 const mongoose = require('mongoose')
@@ -59,7 +60,7 @@ app.use(
   )
   .then(() => {
     console.log('Conectou ao banco!')
-    app.listen(27017)
+    app.listen(4000)
   })
   .catch((err) => console.log(err))
 
